@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body{
+            margin-top:150px;
+            margin-left:520px;
+        }
+        #main{
+            background-color:rgb(231, 231, 235);
+            height:300px;
+            width:280px;
+            border-radius:5px;
+        }
+        h2{
+            text-align:center;
+            font-size:28px;
+            font-family:cursive;
+        }
+        #nameContainer{
+            display:flex;
+            flex-direction: row; 
+            height:40px;
+            width:80%;
+            background-color:rgb(195, 195, 195);
+            text-align:center;
+            margin-left:30px;
+            border-radius:3px;
+            border:1px solid grey; 
+        }
+        #user{
+            font-size:20px;
+            padding:10px;
+        }
+        #name{
+            width:100%;
+            border-bottom-right-radius:3px;
+            border-top-right-radius:3px;
+            border:none;
+            font-size:18px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding:10px;
+        }
+        #passwordContainer{
+            display:flex;
+            flex-direction: row; 
+            height:40px;
+            width:80%;
+            background-color:rgb(195, 195, 195);
+            text-align:center;
+            margin-left:30px;
+            border-radius:3px;
+            border:1px solid grey;
+            margin-top:20px;
+        }
+        #lock{
+            font-size:20px;
+            padding:10px;
+        }
+        #password{
+            width:100%;
+            border-bottom-right-radius:3px;
+            border-top-right-radius:3px;
+            border:none;
+            font-size:18px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding:10px;
+            
+        }
+        #button{
+            height:40px;
+            width:80%;
+            background-color:rgb(21, 84, 255);
+            text-align:center;
+            margin-left:30px;
+            border-radius:3px;
+            border:1px solid grey;
+            margin-top:20px;
+            font-size:16px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color:white;
+        }
+        #checkBox{
+            margin-left:15px;
+            margin-top:15px;
+            
+        }
+        #link{
+            text-decoration:none;
+            color:rgb(86, 86, 255);
+            margin-left:20px;
+        }
+        #signup{
+            margin:10px;
+            margin-left:18px;
+        }
+        a{
+            text-decoration:none;
+            color:rgb(161, 0, 161);
+        }
+
+        #button:active{
+            transform: translateY(0.5px);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h2>Instagram</h2>
+        <div id="nameContainer">
+            <i id="user"class="fas fa-user"></i>
+            <input type="text" id="name" placeholder="Username">
+        </div>
+        <div id="passwordContainer">
+            <i id="lock" class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <button id="button" onclick="return Validate();"> Log in</button>
+        <br>
+        <input type="checkbox" id="checkBox">
+        <label name="checkBox"> Remember me</label>   
+        <a href="#" id="link">Forgot Password?</a>
+    </div>
+    <div id="signup"> Don't have any account? <a href="#">Create one.</a></div>
+        <script>
+            function Validate(){
+            let userName=document.querySelector("#name").value.trim();
+            let password=document.querySelector("#password").value.trim();
+            
+            if(!userName){
+                alert("Username is required.");
+                return false;
+            }
+            else if(!password){
+                alert("Password is required.");
+                return false;
+            }
+            else{
+                alert("Logged in successfully.");
+                return true;
+            }
+        }
+        </script>
+    
+</body>
+</html>
